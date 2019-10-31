@@ -1,5 +1,5 @@
 import { useContext, createContext } from "react";
-import { types, Instance } from "mobx-state-tree";
+import { types, Instance, onSnapshot } from "mobx-state-tree";
 
 const CounterModel = types
   .model({
@@ -18,13 +18,12 @@ const RootModel = types.model({
   counter: CounterModel
 });
 
-// Init
-
 export const rootStore = RootModel.create({
   counter: {
     count: 0
   }
 });
+onSnapshot(rootStore, snapshot => console.log("Snapshot: ", snapshot));
 
 export type RootInstance = Instance<typeof RootModel>;
 const RootStoreContext = createContext<null | RootInstance>(null);

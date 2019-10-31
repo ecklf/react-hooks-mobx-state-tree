@@ -4,18 +4,19 @@ import { observer } from "mobx-react-lite";
 
 import { Provider, rootStore, useMst } from "./models/Root";
 
-import logo from "./logo.svg";
-import "./App.css";
-
 export const Counter: React.FC = observer(() => {
   const store = useMst();
   return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
+    <div className="w-screen h-screen flex flex-col justify-center items-center">
       <p>{store.counter.count}</p>
-      <button onClick={store.counter.increment}>Increment</button>
-      <button onClick={store.counter.decrement}>Decrement</button>
-    </header>
+      <button className="mt-2" onClick={store.counter.increment}>
+        Increment
+      </button>
+
+      <button className="mt-2" onClick={store.counter.decrement}>
+        Decrement
+      </button>
+    </div>
   );
 });
 
