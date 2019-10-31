@@ -2,7 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/impulse/react-hooks-mobx-state-tree)
 <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/impulse/react-hooks-mobx-state-tree.svg">
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/18536c2a-e013-485c-b7eb-33c6c7b32c88/deploy-status)](https://app.netlify.com/sites/react-hooks-mobx-state-tree/deploys)
 ## About
 
 Example project of how to use mobx-state-tree (MST) with React Hooks and TypeScript.
