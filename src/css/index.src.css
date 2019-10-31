@@ -1,12 +1,27 @@
+@import url("https://rsms.me/inter/inter.css");
+
 @tailwind base;
 @tailwind components;
 
 :root {
-  @apply bg-gray-900 text-white;
+  @apply antialiased font-display bg-gray-900 text-white;
 }
 
-button {
-  @apply px-4 py-2 rounded-md text-gray-600 bg-gray-200;
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: theme("colors.gray.200");
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme("colors.orange.500");
 }
 
 @tailwind utilities;
