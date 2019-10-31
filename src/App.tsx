@@ -11,8 +11,8 @@ import logo from "./assets/mstlogo.png";
 const App: React.FC = () => {
   return (
     <Provider value={rootStore}>
-      <div className="w-screen h-screen flex flex-col items-center">
-        <img src={logo} alt="mst logo" className="block max-w-md h-auto" />
+      <div className="container mx-auto">
+        <img src={logo} alt="mst logo" className="block mx-auto w-64 h-auto" />
         <div className="relative">
           <h1 className="font-bold text-3xl text-center">
             react-hooks-mobx-state-tree

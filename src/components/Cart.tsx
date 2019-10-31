@@ -72,7 +72,7 @@ const Cart: React.FC<Props> = observer(() => {
           }}
         />
       </div>
-      <div className="mt-3 h-56 overflow-y-scroll">
+      <div className="my-12 h-64 bg-gray-800 rounded overflow-y-scroll">
         {cart.items.map((item, index) => {
           return (
             <div
