@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create a counter instance 1`] = `
+Object {
+  "count": 0,
+}
+`;
+
+exports[`should increment and decrement 1`] = `
+Array [
+  Object {
+    "op": "replace",
+    "path": "/count",
+    "value": 1,
+  },
+  Object {
+    "op": "replace",
+    "path": "/count",
+    "value": 0,
+  },
+]
+`;
