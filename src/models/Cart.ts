@@ -29,4 +29,12 @@ export const Cart = types
     ) {
       self.items.push(cartItem);
     }
+  }))
+  .views(self => ({
+    get totalItems() {
+      return self.items.length;
+    },
+    get totalPrice() {
+      return self.items.reduce((sum, entry) => sum + entry.price, 0);
+    }
   }));

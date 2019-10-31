@@ -1,31 +1,36 @@
 import React from "react";
+import { Provider, rootStore } from "./models/Root";
 
-import { observer } from "mobx-react-lite";
+import GitHubButton from "react-github-btn";
 
-import { Provider, rootStore, useMst } from "./models/Root";
+import Counter from "./components/Counter";
+import Cart from "./components/Cart";
 
-export const Counter: React.FC = observer(() => {
-  const store = useMst();
-  return (
-    <div className="w-screen h-screen flex flex-col justify-center items-center">
-      <p>{store.counter.count}</p>
-      <button className="mt-2" onClick={store.counter.increment}>
-        Increment
-      </button>
-
-      <button className="mt-2" onClick={store.counter.decrement}>
-        Decrement
-      </button>
-    </div>
-  );
-});
+import logo from "./assets/mstlogo.png";
 
 const App: React.FC = () => {
-  if (!rootStore) return null;
   return (
     <Provider value={rootStore}>
-      <div className="App">
+      <div className="w-screen h-screen flex flex-col items-center">
+        <img src={logo} alt="mst logo" className="block max-w-md h-auto" />
+        <div className="relative">
+          <h1 className="font-bold text-3xl text-center">
+            react-hooks-mobx-state-tree
+          </h1>
+          <div className="mt-3 absolute w-full flex justify-center">
+            <GitHubButton
+              href="https://github.com/impulse/react-hooks-mobx-state-tree"
+              data-icon="octicon-star"
+              data-size="large"
+              data-show-count={true}
+              aria-label="Star impulse/react-hooks-mobx-state-tree on GitHub"
+            >
+              Star
+            </GitHubButton>
+          </div>
+        </div>
         <Counter />
+        <Cart />
       </div>
     </Provider>
   );
