@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+
+:root {
+  @apply bg-gray-900 text-white;
+}
+
+button {
+  @apply px-4 py-2 rounded-md text-gray-600 bg-gray-200;
+}
+
+@tailwind utilities;
