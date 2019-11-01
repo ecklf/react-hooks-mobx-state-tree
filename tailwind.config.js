@@ -1,3 +1,5 @@
+const { boxShadow } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   theme: {
     fontFamily: {
@@ -33,7 +35,12 @@ module.exports = {
         }
       }
     }),
-    extend: {}
+    extend: {
+      boxShadow: {
+        ...boxShadow,
+        outline: "0 0 0 3px rgba(239, 121, 48, 0.5)"
+      }
+    }
   },
   variants: {},
   plugins: [require("@tailwindcss/custom-forms")]

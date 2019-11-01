@@ -17,8 +17,8 @@ const Button: React.FC<Props> = ({
     <button
       {...otherProps}
       disabled={disabled}
-      className={`px-4 py-2 rounded text-gray-900 bg-gray-300 select-none focus:outline-none ${!disabled &&
-        "hover:text-black hover:bg-orange-500"} ${disabled &&
+      className={`px-4 py-2 rounded leading-tight text-gray-900 bg-gray-300 select-none focus:outline-none focus:shadow-outline ${!disabled &&
+        "hover:text-black hover:bg-orange-400"} ${disabled &&
         "opacity-50"} ${className}`}
     >
       {label}
