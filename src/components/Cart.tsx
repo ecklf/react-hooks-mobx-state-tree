@@ -10,11 +10,11 @@ interface Props {}
 const Cart: React.FC<Props> = observer(() => {
   const { cart } = useMst();
 
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState(0.0);
+  const [name, setName] = useState("The Hobbit");
+  const [price, setPrice] = useState(20);
 
   const isDisabled = () => {
-    return name === "";
+    return name === "" || price === 0;
   };
 
   return (
@@ -50,13 +50,13 @@ const Cart: React.FC<Props> = observer(() => {
       <div className="mt-4 flex items-center">
         <p
           style={{ fontVariant: "tabular-nums" }}
-          className="leading-none font-bold text-lg"
+          className="leading-tight font-bold text-lg"
         >
           Items: {cart.totalItems}
         </p>
         <p
           style={{ fontVariant: "tabular-nums" }}
-          className="ml-4 flex-grow leading-none font-bold text-lg"
+          className="ml-4 flex-grow leading-tight font-bold text-lg"
         >
           Total: {cart.totalPrice}
         </p>
@@ -76,11 +76,20 @@ const Cart: React.FC<Props> = observer(() => {
         {cart.items.map((item, index) => {
           return (
             <div
+              key={`${item.name}-${index}`}
               className={`${index !== 0 &&
-                "mt-2"} mr-2 px-4 py-2 flex items-center rounded rounded-sm text-gray-700 bg-gray-200`}
+                "mt-2"} mr-2 px-4 py-2 flex items-center rounded rounded-sm leading-tight text-gray-700 bg-gray-200`}
             >
               <div className="flex-grow">{item.name}</div>
               <div>{item.price}</div>
+              <span
+                className="ml-5 cursor-pointer select-none"
+                onClick={item.remove}
+                role="img"
+                aria-label="delete"
+              >
+                ❌
+              </span>
             </div>
           );
         })}

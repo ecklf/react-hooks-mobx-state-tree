@@ -22,7 +22,7 @@ it("should create a cart instance", () => {
   const cart = Cart.create({
     items: [
       {
-        name: "First Item",
+        name: "Instance Item",
         price: 2.83,
         tags: [{ name: "first" }]
       }
@@ -40,13 +40,34 @@ it("can add new items to the cart", () => {
   });
 
   cart.addCartItem({
-    name: "New Item",
+    name: "New Item 1",
     price: 1
   });
   cart.addCartItem({
     name: "New Item 2",
     price: 2
   });
+  expect(states).toMatchSnapshot();
+});
+
+it("can remove an item from the cart", () => {
+  const cart = Cart.create();
+  const states: any = [];
+
+  onSnapshot(cart, snapshot => {
+    states.push(snapshot);
+  });
+
+  cart.addCartItem({
+    name: "New Item 1",
+    price: 1
+  });
+  cart.addCartItem({
+    name: "New Item 2",
+    price: 2
+  });
+  cart.items[0].remove();
+  cart.items[0].remove();
   expect(states).toMatchSnapshot();
 });
 
@@ -59,7 +80,7 @@ it("can rename an item in the cart", () => {
   });
 
   cart.addCartItem({
-    name: "New Item",
+    name: "New Item 1",
     price: 1
   });
 
