@@ -3,3 +3,15 @@
     "config:base"
   ]
 }
+
+{
+  "assignees": ["impulse"],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "bumpVersion": "patch",
+  "extends": [
+    "config:base"
+  ]
+}
