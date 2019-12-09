@@ -1,10 +1,10 @@
 {
   "name": "react-hooks-mobx-state-tree",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.23",
-    "@types/node": "12.12.14",
+    "@types/node": "12.12.15",
     "@types/react": "16.9.15",
     "@types/react-dom": "16.9.4",
     "mobx": "5.15.0",
