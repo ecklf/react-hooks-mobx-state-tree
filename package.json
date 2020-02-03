@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-mobx-state-tree",
-  "version": "0.1.52",
+  "version": "0.1.53",
   "private": true,
   "dependencies": {
     "@types/jest": "25.1.1",
@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "2.0.5",
+    "@fullhuman/postcss-purgecss": "2.0.6",
     "@tailwindcss/custom-forms": "0.2.1",
     "autoprefixer": "9.7.4",
     "concurrently": "5.1.0",
