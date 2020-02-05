@@ -27,5 +27,5 @@ export function useMst() {
   if (store === null) {
     throw new Error("Store cannot be null, please add a context provider");
   }
-  return store as RootInstance;
+  return store;
 }
