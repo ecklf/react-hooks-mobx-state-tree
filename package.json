@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-mobx-state-tree",
-  "version": "0.1.71",
+  "version": "0.1.72",
   "private": true,
   "dependencies": {
     "@types/jest": "25.1.4",
@@ -13,7 +13,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-github-btn": "1.1.1",
-    "react-scripts": "3.4.0",
+    "react-scripts": "3.4.1",
     "typescript": "3.8.3"
   },
   "scripts": {
