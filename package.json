@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-mobx-state-tree",
-  "version": "0.1.97",
+  "version": "0.1.98",
   "private": true,
   "dependencies": {
     "@types/jest": "25.2.1",
@@ -14,7 +14,7 @@
     "react-dom": "16.13.1",
     "react-github-btn": "1.1.1",
     "react-scripts": "3.4.1",
-    "typescript": "3.8.3"
+    "typescript": "3.9.3"
   },
   "scripts": {
     "start": "yarn run build:css && react-scripts start",
