@@ -9,14 +9,27 @@ const RootModel = types.model({
   cart: Cart
 });
 
-export const rootStore = RootModel.create({
+let initialState = RootModel.create({
   counter: {
     count: 0
   },
   cart: { items: [] }
 });
 
-onSnapshot(rootStore, snapshot => console.log("Snapshot: ", snapshot));
+const data = localStorage.getItem('rootState');
+if (data) {
+  const json = JSON.parse(data);
+  if (RootModel.is(json)) {
+    initialState = RootModel.create(json);
+  }
+}
+
+export const rootStore = initialState;
+
+onSnapshot(rootStore, snapshot => {
+  console.log("Snapshot: ", snapshot);
+  localStorage.setItem('rootState', JSON.stringify(snapshot));
+});
 
 export type RootInstance = Instance<typeof RootModel>;
 const RootStoreContext = createContext<null | RootInstance>(null);
