@@ -1,14 +1,16 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import React from "react";
 import Cart from "../components/Cart";
 import Counter from "../components/Counter";
 import { Provider, rootStore } from "../models/Root";
+const GitHubButton = dynamic(import("react-github-btn"), { ssr: false });
 
 export default function Home() {
   return (
     <Provider value={rootStore}>
       <Head>
-        <title>Create Next App</title>
+        <title>react-hooks-mobx-state-tree</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="container mx-auto">
@@ -22,15 +24,15 @@ export default function Home() {
             react-hooks-mobx-state-tree
           </h1>
           <div className="absolute flex justify-center w-full mt-3">
-            {/* <GitHubButton
-              href="https://github.com/impulse/react-hooks-mobx-state-tree"
+            <GitHubButton
+              href="https://github.com/ecklf/react-hooks-mobx-state-tree"
               data-icon="octicon-star"
               data-size="large"
               data-show-count={true}
-              aria-label="Star impulse/react-hooks-mobx-state-tree on GitHub"
+              aria-label="Star ecklf/react-hooks-mobx-state-tree on GitHub"
             >
               Star
-            </GitHubButton> */}
+            </GitHubButton>
           </div>
         </div>
         <Counter />
