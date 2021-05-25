@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`can add new items to the cart 1`] = `
+Array [
+  Object {
+    "items": Array [
+      Object {
+        "name": "New Item 1",
+        "price": 1,
+        "tags": Array [],
+      },
+    ],
+  },
+  Object {
+    "items": Array [
+      Object {
+        "name": "New Item 1",
+        "price": 1,
+        "tags": Array [],
+      },
+      Object {
+        "name": "New Item 2",
+        "price": 2,
+        "tags": Array [],
+      },
+    ],
+  },
+]
+`;
+
+exports[`can remove an item from the cart 1`] = `
+Array [
+  Object {
+    "items": Array [
+      Object {
+        "name": "New Item 1",
+        "price": 1,
+        "tags": Array [],
+      },
+    ],
+  },
+  Object {
+    "items": Array [
+      Object {
+        "name": "New Item 1",
+        "price": 1,
+        "tags": Array [],
+      },
+      Object {
+        "name": "New Item 2",
+        "price": 2,
+        "tags": Array [],
+      },
+    ],
+  },
+  Object {
+    "items": Array [
+      Object {
+        "name": "New Item 2",
+        "price": 2,
+        "tags": Array [],
+      },
+    ],
+  },
+  Object {
+    "items": Array [],
+  },
+]
+`;
+
+exports[`can rename an item in the cart 1`] = `
+Array [
+  Object {
+    "op": "add",
+    "path": "/items/0",
+    "value": Object {
+      "name": "New Item 1",
+      "price": 1,
+      "tags": Array [],
+    },
+  },
+  Object {
+    "op": "replace",
+    "path": "/items/0/name",
+    "value": "New Item (new)",
+  },
+]
+`;
+
+exports[`should create a cart instance 1`] = `
+Object {
+  "items": Array [
+    Object {
+      "name": "Instance Item",
+      "price": 2.83,
+      "tags": Array [
+        Object {
+          "name": "first",
+        },
+      ],
+    },
+  ],
+}
+`;
+
+exports[`should create a model instance 1`] = `
+Array [
+  Object {
+    "op": "replace",
+    "path": "/name",
+    "value": "Google Pixel 4",
+  },
+  Object {
+    "op": "replace",
+    "path": "/price",
+    "value": 799,
+  },
+]
+`;
